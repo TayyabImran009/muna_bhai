@@ -1,0 +1,299 @@
+html,
+body {
+    height: auto;
+    /* Allow the height to adapt to the content */
+    margin: 0;
+}
+
+/* Nav Bar */
+
+.nav-link {
+    color: var(--clr-black);
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.nav-item {
+    padding-top: 10px;
+}
+
+.nav-item>a {
+    font-size: 20px;
+}
+
+.nav-item .nav-link {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-item .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: var(--clr-green);
+    /* Color of the underline */
+    transition: width 0.3s ease-in-out;
+    /* Smooth animation */
+}
+
+/* Initially, hide the underline */
+.nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: width 0.3s ease-in-out;
+}
+
+/* On hover, make the underline visible */
+.nav-item .nav-link:hover::after {
+    width: 100%;
+    background-color: var(--clr-green);
+    /* Bootstrap primary color, or customize */
+}
+
+
+.navbar-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.fa-whatsapp {
+    font-size: 30px;
+    color: var(--clr-green);
+}
+
+.fa-whatsapp:hover {
+    color: var(--clr-light-green);
+}
+
+.fa-phone {
+    font-size: 25px;
+    color: var(--clr-green);
+}
+
+.fa-phone:hover {
+    color: var(--clr-light-green);
+}
+
+.fa-map-marker {
+    font-size: 30px;
+    color: var(--clr-green);
+}
+
+.fa-map-marker:hover {
+    color: var(--clr-light-green);
+}
+
+@media (max-width: 992px) {
+    .navbar-text {
+        justify-content: start;
+    }
+}
+
+
+
+/* carousel */
+
+.carousel {
+    height: 80vh;
+}
+
+.carousel-wrapper {
+    flex: 1;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    height: 80vh;
+}
+
+.carousel-inner img {
+    height: 80vh;
+    object-fit: cover;
+}
+
+
+.image-overlay {
+    position: relative;
+}
+
+.image-overlay img {
+    width: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel-caption>h2 {
+    font-size: 42px;
+}
+
+.image-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust transparency here */
+    z-index: 1;
+}
+
+
+
+/* About us page */
+
+.about-us-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-title {
+    color: var(--clr-green);
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.about-us-txt-area {
+    padding-right: 60px;
+}
+
+.about-us-txt {
+    font-size: 17px;
+    text-align: left;
+}
+
+.about-us-bulits {
+    font-size: 17px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.bullet-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.bullet-list>span {
+    display: flex;
+    gap: 10px;
+    align-items: start;
+    text-align: left;
+}
+
+.bullet-list>span>i {
+    margin-top: 5px;
+    color: var(--clr-light-green);
+    background-color: black;
+    border-radius: 50%;
+}
+
+@media (max-width: 992px) {
+    .about-us-container {
+        padding: 50px 10px;
+    }
+
+    .about-us-txt-area {
+        padding-right: 0px;
+    }
+
+}
+
+/* Services Section */
+
+.services-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f8ff;
+    padding: 50px 0px;
+}
+
+@media (max-width: 992px) {
+    .services-section {
+        padding: 50px 0px;
+    }
+}
+
+.services-title-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.services-title-wrapper>h5 {
+    margin-bottom: 0px;
+}
+
+.card {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card-image {
+    height: 190px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.card-body>h5 {
+    font-weight: bolder;
+}
+
+.card-body>a {
+    background-color: var(--clr-green);
+    color: white;
+}
+
+.services-list-btn:hover {
+    border: solid 1px var(--clr-green) !important;
+    color: var(--clr-green) !important;
+}
+
+/* Google Map */
+
+.map-container {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+
+/* Footer */
+

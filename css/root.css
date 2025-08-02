@@ -1,0 +1,42 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+    /* ------------------- */
+    /* color              */
+    /* ------------------- */
+
+    --clr-black: #000000;
+    --clr-white: #FFFFFF;
+    --clr-green: #50910b;
+    --clr-light-green: #6ac30b;
+
+}
+
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
