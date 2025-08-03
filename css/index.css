@@ -94,9 +94,24 @@ body {
     color: var(--clr-light-green);
 }
 
+.custom-mobile-nav{
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 992px) {
     .navbar-text {
         justify-content: start;
+    }
+
+    .custom-mobile-nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-brand{
+        width: 174px !important;
     }
 }
 
