@@ -25,8 +25,27 @@
     <title>Document</title>
 </head>
 
-<body>
-
+<body style="position: relative;">
+    <span class="navbar-text" style="position:fixed; top:80vh; z-index:1; flex-direction:column; gap:10px; right: 20px;">
+        <a class="nav-link d-sm-flex align-items-sm-center" href="https://wa.me/+971544991688" 
+        style="
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;"
+        >
+            <i class="fa-brands fa-whatsapp" style="font-size: 40px;"></i>
+        </a>
+        <a class="nav-link" href="tel:+971544991688" 
+        style="
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;"
+        >
+            <span><i class="fa fa-phone" aria-hidden="true" style="font-size: 33px;"></i></span>
+        </a>
+    </span>
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light" style="min-height: 20vh;">
         <div class="container container-fluid">
@@ -37,14 +56,6 @@
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <span class="navbar-text">
-                    <a class="nav-link d-sm-flex align-items-sm-center" href="https://wa.me/+971544991688">
-                        <i class="fa-brands fa-whatsapp" style="font-size: 40px;"></i>
-                    </a>
-                    <a class="nav-link" href="tel:+971544991688">
-                        <span><i class="fa fa-phone" aria-hidden="true" style="font-size: 33px;"></i></span>
-                    </a>
-                </span>
             </div>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="justify-content: center; width: 100%; gap: 20px;">
@@ -256,7 +267,8 @@
                 </div>
                 <!-- Image Content -->
                 <div class="col-md-6 team-image text-center">
-                    <img src="images/services/logo-bg-2.png" style="mix-blend-mode: multiply;" alt="Team" class="img-fluid" />
+                    <img src="images/services/logo-bg-2.png" style="mix-blend-mode: multiply;" alt="Team"
+                        class="img-fluid" />
                 </div>
             </div>
         </div>
